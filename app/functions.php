@@ -1,10 +1,11 @@
 <?php
 
-function view ($file = 'index', $data = []){
-    extract($data);
+function view ($file = 'index'){
 
-    require_once __DIR__.'/../views/'.$file.'.php';
+    require_once __DIR__.'/../views/frontend/'.$file.'.php';
 }
+
+
 
 function dd($var){
     echo '<pre>';

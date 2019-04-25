@@ -2,9 +2,9 @@
 
 
 use Phroute\Phroute\Dispatcher;
-    use Phroute\Phroute\RouteCollector;
-    use Phroute\Phroute\RouteParser;
-    use Illuminate\Database\Capsule\Manager;
+use Phroute\Phroute\RouteCollector;
+use Phroute\Phroute\RouteParser;
+use Illuminate\Database\Capsule\Manager;
 
 
 session_start();
@@ -23,6 +23,8 @@ $manager->addConnection([
 ]);
 $manager->setAsGlobal();
 $manager->bootEloquent();
+
+
 
 
 $router = new RouteCollector(new RouteParser());

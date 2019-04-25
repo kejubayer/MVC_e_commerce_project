@@ -1,4 +1,9 @@
 <?php
 
-$router->get('/home',[\App\Controller\HomeController::class,'showHome']);
-$router->get('/test',[\App\Controller\HomeController::class,'showTest']);
+////$router->get('/',[\App\Controller\HomeController::class,'showHome']);
+//$router->get('/',function (){
+//    echo "root";
+//});
+
+
+$router->controller('/',\App\Controller\HomeController::class);

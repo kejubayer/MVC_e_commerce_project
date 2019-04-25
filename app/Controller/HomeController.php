@@ -2,18 +2,39 @@
 
 
 namespace App\Controller;
-
-
 use App\Models\User;
 
 class HomeController
 {
-    public  function showHome(){
-        $users = User::all();
-        $data['users']=$users;
-        view('home',$data);
+    public  function getIndex(){
+        view('home');
     }
-    public  function showTest(){
-        view('test');
+
+    public function getLogin(){
+        view('login');
     }
+
+    public function postLogin(){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $user = User::where('email', $email)->first();
+        if ($user){
+            if (password_verify($password, $user->password)=== true){
+                echo 'Logged In';
+            } else{
+                echo 'Invalid Password';
+            }
+        }else{
+            echo 'User Not Found';
+        }
+    }
+    public function getRegister(){
+        view('register');
+    }
+
+    public function postRegister(){
+
+    }
+
 }
