@@ -6,4 +6,8 @@
 //});
 
 
-$router->controller('/',\App\Controller\HomeController::class);
+use App\Controller\Frontend\HomeController;
+use App\Controller\Frontend\UserController;
+
+$router->controller('/',HomeController::class);
+$router->controller('/',UserController::class);

@@ -1,15 +1,11 @@
 <?php
 
+namespace App\Controller\Frontend;
 
-namespace App\Controller;
 use App\Models\User;
 
-class HomeController
+class UserController
 {
-    public  function getIndex(){
-        view('home');
-    }
-
     public function getLogin(){
         view('login');
     }
@@ -34,7 +30,12 @@ class HomeController
     }
 
     public function postRegister(){
-
+        User::create([
+           'full_name' => $_POST['full_name'],
+            'address' => $_POST['address'],
+            'mobile_number' => $_POST['mobile_number'],
+            'email' => $_POST['email'],
+            'password' => password_hash($_POST['password'],PASSWORD_BCRYPT)
+        ]);
     }
-
 }

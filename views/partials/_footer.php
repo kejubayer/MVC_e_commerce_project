@@ -1,7 +1,7 @@
 <footer class="text-muted">
     <div class="container">
         <p class="float-right">
-            <a href="#">Back to top</a>
+            <a href="#">Top</a>
         </p>
         <p>Pizza Hut &copy; Khondoker Eftakhar Jubayer</p>
 
