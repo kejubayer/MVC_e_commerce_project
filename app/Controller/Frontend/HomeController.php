@@ -2,12 +2,15 @@
 
 
 namespace App\Controller\Frontend;
-use App\Models\User;
 
 class HomeController
 {
     public  function getIndex(){
         view('home');
+    }
+
+    public function getProduct(){
+        view('product');
     }
 
 
