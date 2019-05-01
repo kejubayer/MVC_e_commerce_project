@@ -19,6 +19,10 @@ class ComposerStaticInit186ab7230619e170c732664015e9abc4
             'Symfony\\Contracts\\' => 18,
             'Symfony\\Component\\Translation\\' => 30,
         ),
+        'R' => 
+        array (
+            'Respect\\Validation\\' => 19,
+        ),
         'P' => 
         array (
             'Psr\\SimpleCache\\' => 16,
@@ -58,6 +62,10 @@ class ComposerStaticInit186ab7230619e170c732664015e9abc4
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Respect\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/respect/validation/library',
         ),
         'Psr\\SimpleCache\\' => 
         array (

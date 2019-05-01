@@ -1,6 +1,9 @@
 <?php
 
-function view ($file = 'index'){
+function view ($file = 'index', $data = []){
+
+    extract($data, EXTR_SKIP);
+
 
     require_once __DIR__.'/../views/frontend/'.$file.'.php';
 }

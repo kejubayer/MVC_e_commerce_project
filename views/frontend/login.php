@@ -4,6 +4,7 @@ require_once __DIR__.'/../partials/_header.php';
 
 <main role="main" class="login-page">
     <div class="container">
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
         <form action="/login" method="post" >
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
@@ -13,7 +14,7 @@ require_once __DIR__.'/../partials/_header.php';
                 <label for="exampleInputPassword1">Password</label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Log in</button>
         </form>
     </div>
 </main>

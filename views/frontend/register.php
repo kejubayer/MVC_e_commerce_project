@@ -22,6 +22,9 @@ require_once __DIR__.'/../partials/_header.php';
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
 
+        <label for="inputPhoto" class="sr-only">Profile Photo</label>
+        <input type="file" name="profile_photo" class="form-control" required>
+
 
         <button class="btn btn-lg btn-primary btn-block" type="submit" name="register">Register</button>
     </form>

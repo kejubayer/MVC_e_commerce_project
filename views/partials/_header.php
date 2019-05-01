@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?php echo $title ?? 'Pizza Hut';?></title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/profile.css">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 
 </head>
@@ -20,11 +21,12 @@
                     <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
                 </div>
                 <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Contact</h4>
+                    <h4 class="text-white">Menu</h4>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                        <li><a href="/profile" class="text-white">Profile</a></li>
                         <li><a href="/register" class="text-white">Register</a></li>
                         <li><a href="/login" class="text-white">Login</a></li>
+                        <li><a href="/cart" class="text-white">Carts</a></li>
                     </ul>
                 </div>
             </div>

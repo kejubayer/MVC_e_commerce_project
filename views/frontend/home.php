@@ -4,8 +4,8 @@
 
     <section class="jumbotron text-center">
         <div class="container">
-            <h1 class="jumbotron-heading">Album example</h1>
-            <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+            <h1 class="jumbotron-heading">Pizza Hut</h1>
+            <p class="lead text-muted">Welcome to our restaurant .</p>
             <p>
                 <a href="#" class="btn btn-primary my-2">Main call to action</a>
                 <a href="#" class="btn btn-secondary my-2">Secondary action</a>
@@ -17,21 +17,30 @@
         <div class="container">
 
             <div class="row">
+                <?php foreach ($products as $product): ?>
                 <div class="col-md-4">
                     <div class="card mb-4 shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <a href="/product/<?php echo $product->slug;?>">
+                            <img src="<?php echo $product->photo; ?>" alt="<?php echo $product->name ?>">
+                        </a>
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><?php echo $product->name; ?></p>
+                            <p class="card-text"><?php echo $product->description; ?></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button"  class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <form action="/cart" method="post">
+                                        <input type="hidden" name="id" value="<?php echo $product->id;?>">
+                                        <button type="button" class="btn btn-success btn-block" name="add">Add to cart</button>
+                                    </form>
+
                                 </div>
-                                <small class="text-muted">9 mins</small>
+                                <small class="text-muted">BDT <?php echo $product->price;?> </small>
                             </div>
                         </div>
                     </div>
                 </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

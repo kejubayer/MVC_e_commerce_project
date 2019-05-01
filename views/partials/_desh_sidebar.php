@@ -20,6 +20,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/dashboard/add_product">
+                    <span data-feather="upload-cloud"></span>
+                    Add Product
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#">
                     <span data-feather="users"></span>
                     Customers

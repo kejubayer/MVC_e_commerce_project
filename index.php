@@ -4,14 +4,14 @@
 use Phroute\Phroute\Dispatcher;
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\RouteParser;
-use Illuminate\Database\Capsule\Manager;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 
 session_start();
 
 require_once 'vendor/autoload.php';
-$manager = new Manager();
-$manager->addConnection([
+$capsule = new Capsule();
+$capsule->addConnection([
     'driver' => 'mysql',
     'host' => 'localhost',
     'database' => 'ppi',
@@ -21,8 +21,8 @@ $manager->addConnection([
     'collation' => 'utf8_unicode_ci',
     'prefix' => '',
 ]);
-$manager->setAsGlobal();
-$manager->bootEloquent();
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
 
 
 

@@ -15,3 +15,8 @@ $router->controller('/',HomeController::class);
 $router->controller('/',UserController::class);
 
 $router->controller('/dashboard',DashboardController::class);
+$router->get('/dashboard/add_product',[DashboardController::class,'showAddProduct']);
+
+/*$router->group(['prefix' => 'dashboard'], function (RouteCollector $router) {
+    $router->controller('/', DashboardController::class);
+});*/

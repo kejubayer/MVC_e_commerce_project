@@ -3,7 +3,7 @@
         <p class="float-right">
             <a href="#">Top</a>
         </p>
-        <p>Pizza Hut &copy; Khondoker Eftakhar Jubayer</p>
+        <p>Pizza Hut &copy; Khondoker Eftakhar Jubayer . <?php echo date('d/m/Y'); ?> </p>
 
     </div>
 </footer>
